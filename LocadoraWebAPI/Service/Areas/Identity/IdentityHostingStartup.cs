@@ -20,7 +20,7 @@ namespace LocadoraWebAPI.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("LocadoraWebAPIContextConnection")));
 
-                services.AddDefaultIdentity<LocadoraWebAPIUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<LocadoraWebAPIUser>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<LocadoraWebAPIContext>();
             });
         }
